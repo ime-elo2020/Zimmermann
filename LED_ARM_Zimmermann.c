@@ -2,8 +2,8 @@ void inicio();
 
 void (*isr[])() _attribute_ ((section (".vetor")))={ // atribui vetor ponteiro de função a uma seção da
     (void (*) ())0x20020000,                         // memória chamada "vetor" no endereço 0x20020000
-    inicio
-};
+    inicio                                           // tal endereço (final da RAM) é para onde irá retornar
+};                                                   // do interrupt
 
 void inicio (){
     *((int*)(0x40023800 + 0x30))=0x08;              // habilitar porta D
