@@ -2,17 +2,15 @@
 O programa atualmente está configurado para que um botão SW no PC15 ative o interrupt que vai se comunicar por SPI com o controlador de LED para acender outro LED.
 ## Pinagem:
 
-![Pinagem 1](pinagem1.JPG)
-![Pinagem 2](pinagem2.JPG)
-![Pinagem 3](pinagem3.JPG)
+![Pinagem](pinagem.png)
+
 - SW (PC15): recebe o sinal para ativar o interrupt
 - LED_RED (PB5):
 - LED_YELLOW (PB6):
 - 
 
 ## Configuração do CLK
-![Clock1](clk1.JPG)
-![Clock2](clk2.JPG)
+![Clock](clk.png)
 
 ## Periféricos:
 
