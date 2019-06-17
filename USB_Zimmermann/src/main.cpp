@@ -119,7 +119,7 @@ int main(void)
 				usb_device_class_cdc_vcp.SendData(buffer, size);
 			}
 		} while(size==32);
-		if (estado == 1) //fica piscando os leds
+		if (estado == 1) //fica piscando os LEDs
 		{
 		STM_EVAL_LEDOn(LED3);
 		for (i = 0; i < 1000000; i++);
@@ -138,7 +138,7 @@ int main(void)
 		STM_EVAL_LEDOff(LED6);
 		for (i = 0; i < 1000000; i++);
 		}
-		else if (estado ==0)
+		else if (estado ==0) //desliga os LEDs
 		{
 		STM_EVAL_LEDOff(LED3);
 		STM_EVAL_LEDOff(LED4);
