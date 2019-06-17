@@ -79,6 +79,8 @@ INTERRUPT_STM32 usb_otg_fs_interrupt(OTG_FS_IRQn, 0x0D, 0x0D, ENABLE);
 
 int estado, i;
 int main(void)
+
+
 {
 	usb.Init();
 	/**
@@ -119,32 +121,30 @@ int main(void)
 				usb_device_class_cdc_vcp.SendData(buffer, size);
 			}
 		} while(size==32);
-		if (estado == 1) //fica piscando os LEDs
-		{
-		STM_EVAL_LEDOn(LED3);
-		for (i = 0; i < 1000000; i++);
-		STM_EVAL_LEDOn(LED4);
-		for (i = 0; i < 1000000; i++);
-		STM_EVAL_LEDOn(LED5);
-		for (i = 0; i < 1000000; i++);
-		STM_EVAL_LEDOn(LED6);
-		for (i = 0; i < 1000000; i++);
-		STM_EVAL_LEDOff(LED3);
-		for (i = 0; i < 1000000; i++);
-		STM_EVAL_LEDOff(LED4);
-		for (i = 0; i < 1000000; i++);
-		STM_EVAL_LEDOff(LED5);
-		for (i = 0; i < 1000000; i++);
-		STM_EVAL_LEDOff(LED6);
-		for (i = 0; i < 1000000; i++);
-		}
-		else if (estado ==0) //desliga os LEDs
-		{
-		STM_EVAL_LEDOff(LED3);
-		STM_EVAL_LEDOff(LED4);
-		STM_EVAL_LEDOff(LED5);
-		STM_EVAL_LEDOff(LED6);
-		}
+
+
+			if (estado == 1)
+					{
+									STM_EVAL_LEDOn(LED3);
+									for (i = 0; i < 1000000; i++);
+									STM_EVAL_LEDOn(LED4);
+									for (i = 0; i < 1000000; i++);
+									STM_EVAL_LEDOn(LED5);
+									for (i = 0; i < 1000000; i++);
+									STM_EVAL_LEDOn(LED6);
+									for (i = 0; i < 1000000; i++);
+									STM_EVAL_LEDOff(LED3);
+									for (i = 0; i < 1000000; i++);
+									STM_EVAL_LEDOff(LED4);
+									for (i = 0; i < 1000000; i++);
+									STM_EVAL_LEDOff(LED5);
+									for (i = 0; i < 1000000; i++);
+									STM_EVAL_LEDOff(LED6);
+									for (i = 0; i < 1000000; i++);
+					}
+			else;
+
+
 	}
 }
 
