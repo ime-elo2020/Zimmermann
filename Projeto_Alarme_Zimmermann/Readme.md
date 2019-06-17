@@ -2,7 +2,7 @@
 O projeto tem como objetivo criar um módulo que detecta quando uma armadilha for ativada, permitindo vigilância de uma determinada área de forma que a intrusão seja detectada de modo silencioso.
 Esse módulo podera funcionar com até 3 setores (12h as 4h, 4h as 8h e 8h as 12h), acendendo LEDs de acordo com qual intrusão foi detectada.
 Caso queira, será possível conectar até 3 módulos em um módulo central, aumentando a precisão da detecção para 6 setores (12h as 2h, 2h as 4h, 4h as 6h, 6h as 8h, 8h as 10h e 10h as 12h).
-![Alarme](Alarme.png)!
+![Alarme](Alarme.png)
 
 Ao ser detectada uma intrusão, além de acender o LED correspondente à área, o responsável pela vigia do módulo escutará uma mensagem de áudio por um fone de ouvido, que poderá ser retransmitida por rádio através de conexão com o rádio da IMBEL.
 A fim de garantir furtividade durante a noite, o módulo possuirá um botão de acionamento seguro que muda os LEDs para o modo infravermelho.
