@@ -16,6 +16,10 @@ A alimentação passará por um step up (pilha) ou step down (USB) para 3,3V que
 Para controlar os LEDs sem ocupar muitas portas GPIO, será utilizado um CI controlado por SPI.
 Por fim, a comunicação entre os módulos e armadilhas (CI de detecção DS2413P+) será feira por 1-Wire.
 
+## Fluxograma
+
+![Fluxograma](Fluxograma_Zimmermann.png)
+
 ## Componentes para teste
 Para realizar um teste básico será necessário:
 #### - Um uC STM32F105;
