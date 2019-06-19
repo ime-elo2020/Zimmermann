@@ -104,9 +104,11 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
-	  HAL_Delay(3000); //LED pisca a cada 3s para indicar funcionamento (apenas para teste do programa, será removido na versão final)
-    /* USER CODE BEGIN 3 */
+	  //HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
+	  //HAL_Delay(1000); //LED pisca a cada 3s para indicar funcionamento (apenas para teste do programa, será removido na versão final)
+	  HAL_PWR_EnterSLEEPMode(PWR_LOWPOWERREGULATOR_ON , PWR_SLEEPENTRY_WFI); //entra no modo sleep para economizar energia até que aconteça o interrupt
+	  HAL_Delay(1000);
+  /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
 }
